@@ -2,7 +2,7 @@
 import time
 from pymodbus.client import ModbusTcpClient
 
-PI_IP = "127.0.0.1"  # localhost for now - change to your Pi's actual IP
+PI_IP = "192.168.0.210"  # localhost for now - change to your Pi's actual IP
 PI_PORT = 5020
 
 client = ModbusTcpClient(PI_IP, port=PI_PORT)
