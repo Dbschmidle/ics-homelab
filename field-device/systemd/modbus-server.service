@@ -1,0 +1,20 @@
+[Unit]
+Description=ICS Home Lab — Modbus TCP server exposing BMP280 sensor data
+Documentation=https://github.com/Dbschmidle/ics-homelab
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=david
+Group=david
+WorkingDirectory=/home/david/ics-homelab/field-device
+ExecStart=/home/david/ics-homelab/venv/bin/python /home/david/ics-homelab/field-device/modbus_server.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=modbus-server
+
+[Install]
+WantedBy=multi-user.target
