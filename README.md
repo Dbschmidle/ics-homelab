@@ -84,10 +84,17 @@ ics-homelab/
 
 <img width="1907" height="953" alt="image" src="https://github.com/user-attachments/assets/ddaa84e2-c279-4ac7-a884-dfb98aa413be" />
 
-## What's next
 
-- [ ] Convert `collector.py` to a systemd service
-- [ ] Grafana alerting (email on threshold breach)
+
+Granfana Alerting -> Personal Email
+<img width="1907" height="953" alt="image" src="https://github.com/user-attachments/assets/bbedfe9b-f328-40e1-8988-7a2eaa256c13" />
+
+
+Example Alert
+<img width="1589" height="753" alt="image" src="https://github.com/user-attachments/assets/5ad92ec6-248c-4647-9c88-d55c5389126a" />
+
+
+## What's next
 - [ ] VLAN-based network segmentation between field and supervisory zones,
       following IEC-62443 zone-and-conduit principles
 - [ ] DNP3 as a second protocol for utility-grade comparison
