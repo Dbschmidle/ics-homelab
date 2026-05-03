@@ -1,0 +1,21 @@
+[Unit]
+Description=ICS Home Lab — Modbus to InfluxDB collector
+Documentation=https://github.com/Dbschmidle/ics-homelab
+After=network-online.target influxdb.service
+Wants=network-online.target influxdb.service
+
+[Service]
+Type=simple
+User=david
+Group=david
+WorkingDirectory=/home/david/ics-homelab
+EnvironmentFile=/etc/ics-homelab/collector.env
+ExecStart=/home/david/ics-homelab/venv/bin/python /home/david/ics-homelab/supervisory/collector.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ics-collector
+
+[Install]
+WantedBy=multi-user.target

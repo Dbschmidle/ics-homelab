@@ -16,7 +16,8 @@ while True:
         temp = rr.registers[0] / 100
         pressure = rr.registers[1] / 10
         counter = rr.registers[2]
-        print(f"Temp: {temp:.2f}°C  Pressure: {pressure:.2f} hPa  Counter: {counter}")
+        temp_f = (temp * 1.8) + 32
+        print(f"Temp: {temp:.2f}°C / {temp_f:.2f}F  Pressure: {pressure:.2f} hPa  Counter: {counter}")
     time.sleep(2)
 
 
